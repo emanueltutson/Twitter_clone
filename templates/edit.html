@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+<h1 class='edit_hd'>Edit Page</h1>
+<section class = 'content'>
+    <div class="edit_form">
+    <form action="/edit/{{posts.id}}/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class='input_fd'>
+       <p class:'inpt'> Name:  <input type="text" name="name" placeholder="Name" value="{{ posts.name }}" required> </p> <br>
+       <a class='edit'><p class:'inpt1' > Body:  </p> <textarea name="body" placeholder="What's happening? " required>
+         {{ posts.body }} </textarea> </a> <br>
+        </div>
+        {% if posts.image %}
+            <img class ='post-border' src='{{ posts.image.url }}'>
+        {% endif %}
+        <br>
+
+        <input type="file" id="files" name="image" />
+        <div class = 'buttons_update'>
+        <button href= '/' class ='cancel' type='submit'>Cancel </button>
+        <button class="update" type="submit"> Update </button>
+        </div>
+    </form>
+   
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="{% static 'js/posts.js' %}"></script>
+</section>
+{% endblock%}

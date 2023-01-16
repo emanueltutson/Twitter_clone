@@ -1,0 +1,127 @@
+/*
+COMMON
+**************************************/
+
+html,body{
+    height: 100%;
+}
+.content{
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.content .image{
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+/*
+POST
+**************************************/
+.post_form{
+    padding: 20px 40px;
+    border-bottom: 1px solid #ccc;
+}
+.post_form input{
+    width: 70%;
+    margin-bottom:10px;   
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.post_form textarea{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.posts li .menu_icon{
+    width: 20px;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+}
+
+.posts ul{
+    padding: 0;
+}
+.posts li{
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+.posts li .logo{
+    flex-basis: 15%;
+}
+.posts li .menu{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+
+}
+.posts li .menu a{
+    text-decoration: none;
+}
+.posts li .logo img{
+    width: 60%;
+}
+.posts li .name_body{
+    flex-basis: 85%;
+
+}
+.posts li .name_body .name{
+    font-weight: bold;
+
+}
+.posts li .name_body .datetime{
+    color: gray;
+    
+}
+img.post-border{
+    width: 56%;
+}
+div#like-img img {
+    width: 7%;
+}
+@media screen and (max-width: 500px) {
+    .posts li .name_body .name{
+        font-size: 20px;
+    }
+    
+}
+
+/* Edit Page */
+
+
+h1.edit_hd {
+    text-align: center;
+}
+.inpt {
+    display: flex;
+}
+a.edit {
+    display: flex;
+}
+input#files {
+    margin-bottom: 2vw;
+}
+button.cancel {
+    width: 17vw;
+}
+button.update {
+    width: 17vw;
+}
+.buttons_update {
+    text-align: right;
+}
